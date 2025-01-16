@@ -1,0 +1,17 @@
+<div class="container d-flex justify-content-center">
+
+    <div class="w-50">
+
+        <div class="mb-3">
+            <label for="inputTxt">Write Something</label>
+            <input type="text" name="" id="inputTxt" (input)="updateText($event)"/>
+        </div>
+
+        <div class="mb-3">
+            <label for="answerTxt">Text replica</label>
+            <input type="text" name="" id="answerTxt" [value]="message" readonly>
+
+        </div>
+
+    </div>
+</div>
