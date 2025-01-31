@@ -8,15 +8,16 @@ import { EncapTsjsComponent } from "./encap-tsjs/encap-tsjs.component";
 import { ShowMessageComponent } from "./show-message/show-message.component";
 import { ReplicatorComponent } from "./replicator/replicator.component";
 import { GreetingsTwbComponent } from "./greetings-twb/greetings-twb.component";
+import { CompIfComponent } from "./comp-if/comp-if.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NewComponentComponent, StandaloneComponentComponent, CompInlineComponent, InterpolationCompComponent, EncapTsjsComponent, ShowMessageComponent, ReplicatorComponent, GreetingsTwbComponent],
+  imports: [RouterOutlet, NewComponentComponent, StandaloneComponentComponent, CompInlineComponent, InterpolationCompComponent, EncapTsjsComponent, ShowMessageComponent, ReplicatorComponent, GreetingsTwbComponent, CompIfComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'HELLO WORLD ANGULAR';
+  title = '@If Directive Angular';
 }
