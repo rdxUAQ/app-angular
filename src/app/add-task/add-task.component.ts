@@ -9,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AddTaskComponent {
 
+  public task : string = '';
+
+  public addTask(newTask : string): void{
+
+    this.task = newTask;
+    
+  }
+
 }
