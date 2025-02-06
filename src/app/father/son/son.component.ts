@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-son',
@@ -8,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './son.component.css'
 })
 export class SonComponent {
+
+
+  @Input() message!: string;
+
+  @Output() notifyFather = new EventEmitter<string>();
+
+  sendMessage() {
+    //emmite event with a message 
+    this.notifyFather.emit('message to father from son component')
+    }
+
 
 }

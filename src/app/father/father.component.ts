@@ -10,4 +10,14 @@ import { SonComponent } from "./son/son.component";
 })
 export class FatherComponent {
 
+
+  public messageFather: string = 'This is a message from father comp';
+  public messageFromSon : string = '';
+
+  recieveNotifycation(message: string) {
+
+    this.messageFromSon = message;
+
+  }
+
 }

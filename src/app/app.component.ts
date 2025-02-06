@@ -10,15 +10,18 @@ import { ReplicatorComponent } from "./replicator/replicator.component";
 import { GreetingsTwbComponent } from "./greetings-twb/greetings-twb.component";
 import { CompIfComponent } from "./comp-if/comp-if.component";
 import { AddTaskComponent } from "./add-task/add-task.component";
+import { CompForComponent } from "./comp-for/comp-for.component";
+import { FatherComponent } from "./father/father.component";
+import { ViewchildComponent } from "./viewchild/viewchild.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NewComponentComponent, StandaloneComponentComponent, CompInlineComponent, InterpolationCompComponent, EncapTsjsComponent, ShowMessageComponent, ReplicatorComponent, GreetingsTwbComponent, CompIfComponent, AddTaskComponent],
+  imports: [RouterOutlet, NewComponentComponent, StandaloneComponentComponent, CompInlineComponent, InterpolationCompComponent, EncapTsjsComponent, ShowMessageComponent, ReplicatorComponent, GreetingsTwbComponent, CompIfComponent, AddTaskComponent, CompForComponent, FatherComponent, ViewchildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Local Reference Angular';
+  title = 'View Child';
 }

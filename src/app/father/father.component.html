@@ -1,4 +1,14 @@
-<p>father component works!</p>
-<app-son/>
-<app-son/>
-<app-son/>
+<div class="container align-items-center">
+    <h3 class="text-primary"> Father component</h3>
+
+    <p>father component works!</p>
+    
+    <app-son [message]="messageFather" (notifyFather)="recieveNotifycation($event)"></app-son>
+
+    @if (messageFromSon) {
+        <p class="mt-3 alert-inffo w-50 mx-auto">{{messageFromSon}}</p>
+    }
+
+</div>
+
+
