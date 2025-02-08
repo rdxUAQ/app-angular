@@ -13,15 +13,28 @@ import { AddTaskComponent } from "./add-task/add-task.component";
 import { CompForComponent } from "./comp-for/comp-for.component";
 import { FatherComponent } from "./father/father.component";
 import { ViewchildComponent } from "./viewchild/viewchild.component";
+import { MessageService } from './services/message.service';
+import { UsersListObservableComponent } from "./users-list-observable/users-list-observable.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NewComponentComponent, StandaloneComponentComponent, CompInlineComponent, InterpolationCompComponent, EncapTsjsComponent, ShowMessageComponent, ReplicatorComponent, GreetingsTwbComponent, CompIfComponent, AddTaskComponent, CompForComponent, FatherComponent, ViewchildComponent],
+  imports: [RouterOutlet, NewComponentComponent, StandaloneComponentComponent, CompInlineComponent, InterpolationCompComponent, EncapTsjsComponent, ShowMessageComponent, ReplicatorComponent, GreetingsTwbComponent, CompIfComponent, AddTaskComponent, CompForComponent, FatherComponent, ViewchildComponent, UsersListObservableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'View Child';
+  title = 'Services Observable Users';
+
+  public message!: string;
+
+  private _messageService : MessageService;
+
+  constructor(messageService : MessageService){
+
+    this._messageService = messageService;
+
+    this.message = this._messageService.getMessage();
+  }
 }

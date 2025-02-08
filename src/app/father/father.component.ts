@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { SonComponent } from "./son/son.component";
 
 @Component({
@@ -11,12 +11,21 @@ import { SonComponent } from "./son/son.component";
 export class FatherComponent {
 
 
+
   public messageFather: string = 'This is a message from father comp';
   public messageFromSon : string = '';
+  
+  @ViewChild(SonComponent) sonComp!: SonComponent;
 
   recieveNotifycation(message: string) {
 
     this.messageFromSon = message;
+
+  }
+
+  changeMessageSon() {
+
+    this.sonComp.changemessageVC('Updated from father');
 
   }
 

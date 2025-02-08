@@ -1,0 +1,16 @@
+<div clas=" row justify-content-center">
+    <div class="col-md-6">
+        <ul class="list-group">
+            @if(users.length > 0){
+                @for(user of users; track user.id){
+                    <li class = "list-group-item">{{user.toString()}}</li>
+                }
+            }@else {
+                <li class="list-gropu-item text-danger"> No aviable users!!</li>
+            }
+
+        </ul>
+
+    </div>
+
+</div>
