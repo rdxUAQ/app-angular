@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, LOCALE_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NewComponentComponent } from './new-component/new-component.component';
 import { StandaloneComponentComponent } from './standalone-component/standalone-component.component';
@@ -15,12 +15,18 @@ import { FatherComponent } from "./father/father.component";
 import { ViewchildComponent } from "./viewchild/viewchild.component";
 import { MessageService } from './services/message.service';
 import { UsersListObservableComponent } from "./users-list-observable/users-list-observable.component";
+import { ExamplePipesComponent } from "./example-pipes/example-pipes.component";
+import { registerLocaleData } from '@angular/common';
+import localEs from '@angular/common/locales/es';
 
+//localization to spanish
+registerLocaleData(localEs, 'es');
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NewComponentComponent, StandaloneComponentComponent, CompInlineComponent, InterpolationCompComponent, EncapTsjsComponent, ShowMessageComponent, ReplicatorComponent, GreetingsTwbComponent, CompIfComponent, AddTaskComponent, CompForComponent, FatherComponent, ViewchildComponent, UsersListObservableComponent],
+  imports: [RouterOutlet, NewComponentComponent, StandaloneComponentComponent, CompInlineComponent, InterpolationCompComponent, EncapTsjsComponent, ShowMessageComponent, ReplicatorComponent, GreetingsTwbComponent, CompIfComponent, AddTaskComponent, CompForComponent, FatherComponent, ViewchildComponent, UsersListObservableComponent, ExamplePipesComponent],
+  providers: [{provide: LOCALE_ID, useValue: 'es'}],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

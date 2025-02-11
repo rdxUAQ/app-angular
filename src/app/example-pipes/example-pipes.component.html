@@ -1,0 +1,21 @@
+<div class="container my-4">
+    <h3 class="text-center text-primary"></h3>
+    <ul class="list-group w-50 mx-auto">
+        @for(employee of employees; track employee){
+            <li class="lis-group-item d-flex justify-content-between align-items-center mt-3">
+                <div>
+                    <h5 class="mb-1">{{employee.name | uppercase}}</h5>
+                    <small class="text-muted">
+                        Birth date: {{employee.birthDate | date:'longDate'}}
+                    </small>
+                </div>
+                <span class="badge bg-success">
+                    {{employee.salary | currency: 'USD'}}
+                </span>
+
+            </li>
+        }
+    </ul>
+
+
+</div>

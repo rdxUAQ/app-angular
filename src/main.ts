@@ -9,5 +9,6 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(),
     ...appConfig.providers
   ]
-})
+}
+)
   .catch((err) => console.error(err));
